@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Миссия Колонизация Марса</h1>
+        <h3>И на Марсе будут яблони цвести!</h3>
+        <h3>Размещение по каютам</h3>
+        {% set user_list = ['Ваня', 'Петя', 'Саша', 'Кирилл'] %}
+        {% set caut = 'Каюта №' %}
+        {% for user in user_list %}
+           <br>{{ user }} - {{caut}} {{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}
+        {% endfor %}
+    </body>
+</html>
